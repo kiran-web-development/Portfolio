@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import FadeIn from './FadeIn';
 import Magnet from './Magnet';
 import ContactButton from './ContactButton';
+import profileFallback from '../assets/profile.png';
 
 interface HeroSectionProps {
   heroData?: any;
@@ -14,7 +15,7 @@ interface HeroSectionProps {
 export const HeroSection: React.FC<HeroSectionProps> = ({ heroData, onContactClick, onNavClick, onBlogClick }) => {
   const title = heroData?.title || "Hi, i'm Kiran";
   const description = heroData?.description || "a web developer & AI Prompt Engineer and Content Creator | Photographer";
-  const profileImage = heroData?.profileImageUrl || "src/assets/profile.png";
+  const profileImage = heroData?.profileImageUrl || profileFallback;
 
   const handleLinkClick = (e: React.MouseEvent, target: string) => {
     e.preventDefault();
