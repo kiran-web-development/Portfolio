@@ -96,13 +96,17 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({
           kiran's<span className="text-[#BBCCD7]/60">blog Platform</span>
         </h1>
 
-        <button
-          onClick={onGoToDashboard}
-          className="flex items-center gap-2 px-4 py-2 border border-[#D7E2EA]/20 hover:border-white rounded-full text-xs uppercase tracking-widest font-medium transition-all bg-[#D7E2EA]/5 hover:bg-[#D7E2EA]/15 cursor-pointer"
-        >
-          <LayoutDashboard size={14} />
-          <span>Dashboard</span>
-        </button>
+        {new URLSearchParams(window.location.search).get('admin') === 'true' ? (
+          <button
+            onClick={onGoToDashboard}
+            className="flex items-center gap-2 px-4 py-2 border border-[#D7E2EA]/20 hover:border-white rounded-full text-xs uppercase tracking-widest font-medium transition-all bg-[#D7E2EA]/5 hover:bg-[#D7E2EA]/15 cursor-pointer"
+          >
+            <LayoutDashboard size={14} />
+            <span>Dashboard</span>
+          </button>
+        ) : (
+          <div className="w-[100px] sm:w-[120px]" />
+        )}
       </FadeIn>
 
       <article className="max-w-3xl mx-auto">
