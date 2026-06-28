@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-studio",
+  "private": true,
+  "version": "1.0.0",
+  "main": "package.json",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "start": "sanity start"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sanity": "^3.51.0",
+    "styled-components": "^6.1.11"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}
