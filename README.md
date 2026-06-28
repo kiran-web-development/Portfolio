@@ -134,4 +134,3 @@ npm install
 # Start the local Sanity Studio
 npm run dev
 ```
-*Your Sanity Studio will run locally on [http://localhost:3333](http://localhost:3333).*
